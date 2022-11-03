@@ -57,7 +57,7 @@
     "rollup": "^3.2.5",
     "rollup-plugin-dts": "^5.0.0"
   },
-  "main": "dist/cjs/index.js",
+  "main": "src/index.tsx",
   "module": "dist/esm/index.js",
   "files": [
     "dist"
