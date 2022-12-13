@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# How to build new components
+Code structure : 
+```
+├── src
+│   ├── components
+|   │   ├── ComponentName
+|   |   │   ├── ComponentName.tsx
+|   |   │   └── index.ts
+|   │   └── index.ts
+│   └── index.ts
+├── package.json
+└── package-lock.json
+```
+Compare this code structure with that of the existing code in the library. This file structure has to be followed for creating and publishing new components.
+Follow these steps to build a new component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Create a directory in `src/components` with the name of your component
+- All code files of the component go inside this directory. 
+- Write code for your component, and export the component from this file : `ComponentName.tsx`
+- Create index.ts inside this directory
+- In index.ts, import the component exported by `ComponentName.tsx` and export it as default using the following example snippet 
+`export  {  default  }  from  "./ComponentName";`
 
-## Available Scripts
+Bravo! You have successfully created your component. 
 
-In the project directory, you can run:
+# How to use component in react code
+- Install the npm package : [Link](https://github.com/pranshukharkwal/alphaa-react-component-library/pkgs/npm/alphaa-react-component-library)
+[This is a private package, so you won't be able to install it unless you have the ssh keys to my github. Ones this package gets hosted to public npm registry, you should be able to install it]
+- Import component using the snippet : `import {ComponentName} from  "@pranshukharkwal/alphaa-react-component-library"`
+- Use the imported component anywhere in your react code.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+An open source tutorial and code was followed in order to build this library. In case of any issues or confusions, the tutorial can be referred to : [Tutorial link](https://dev.to/alexeagleson/how-to-create-and-publish-a-react-component-library-2oe)
